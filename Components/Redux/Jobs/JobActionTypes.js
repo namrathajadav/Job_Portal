@@ -1,0 +1,3 @@
+export const GET_ALL_JOBS='GET_ALL_JOBS';
+
+export const GET_FILTERED_JOBS='GET_FILTERED_JOBS';

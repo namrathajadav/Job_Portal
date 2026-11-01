@@ -1,0 +1,21 @@
+.footer{
+    margin-top: 50px;
+    background-color: darkgreen;
+    text-align: left;
+    padding:20px;
+    color:white;
+}
+
+.footer-lists{
+    list-style-type: none;
+}
+
+.footer-lists li{
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.lift-up{
+    margin-top: -20px;
+}

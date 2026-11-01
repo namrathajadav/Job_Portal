@@ -1,0 +1,39 @@
+.home_banner{
+   background-color:rgb(215, 237, 215);
+   height:550px;
+}
+
+.search-card{
+    background-color: white;
+    padding:15px;
+    width:600px;
+    border-radius: 15px;
+}
+
+.browse-categories{
+    margin-top:80px;
+}
+
+.categories{
+    list-style-type: none;
+}
+
+.categories li{
+    padding:15px;
+    text-align: left;
+    border:1px solid lightgray;
+    border-radius:5px;
+    width:300px;
+    margin-bottom: 15px;
+}
+
+.work-icon{
+    color:green;
+    margin-right: 7px;
+}
+
+.how-it-works{
+    margin-top:50px;
+}
+
+

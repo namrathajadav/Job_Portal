@@ -1,0 +1,12 @@
+.company-banner{
+        background-color:rgb(215, 237, 215);
+    height:auto;
+    padding:50px;
+}
+
+.company-search-card{
+       background-color: white;
+    padding:15px;
+    width:700px;
+    border-radius: 15px;
+}
