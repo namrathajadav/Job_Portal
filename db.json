@@ -1,0 +1,199 @@
+{
+    "Job_Posts":[
+        {
+            "jobTitle":"React Developer",
+            "companyName":"Eastencher Software Private Limited",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793503678/r0cvyrayqxq843n3gjbq.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["Javascript","React","Redux","Reduxjs/Toolkit","Redux-Thunk"],
+            "location":"Bangalore",
+            "workMode":"onSite",
+            "salary":80000
+        },
+        {
+            "jobTitle":"Junior UI/UX Designer",
+            "companyName":"HCL Technologies Pvt Ltd",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793503768/mwtd7an9eitmovk62uin.webp",
+            "category":"software_engineering",
+            "jobType":"Part Time",
+            "skills":["Javascript","React","Material UI","Web Design","Responsive Design"],
+            "location":"Bangalore",
+            "workMode":"Remote",
+            "salary":100000
+        },
+        {
+            "jobTitle":"Full Stack Developer",
+            "companyName":"Capgemini Technologies Services Pvt Ltd",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504004/ybfpvf0p47p8510vxzp9.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["Javascript","React","Node.js","MongoDB","Express.js","MERN Stack"],
+            "location":"Bangalore",
+            "workMode":"Remote",
+            "salary":120000
+        },
+        {
+            "jobTitle":"Senior Sofware Engineer (Python, Django)",
+            "companyName":"Impel IT solutions",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504209/xle6nzfrlzasupi7fqiw.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["Python","Fast API","Django"],
+            "location":"Pune",
+            "workMode":"Remote",
+            "salary":110000
+        },
+        {
+              "jobTitle":"Junior Backend Engineer",
+            "companyName":"Dynamic Solution Innovators",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504368/c0sd0t9umcdzumma8ktm.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["Nodejs","Nextjs","Php","Python","Laravel","Codeignitor"],
+            "location":"Delhi",
+            "workMode":"onSite",
+            "salary":90000
+        },
+        {
+            "jobTitle":"Lead Devops Engineer",
+               "companyName":"PriyoShop",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504604/hggxi5gfw9u4dumjhjk7.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["Python","Fast API","Flask","DataBricks","Devops","AWS"],
+            "location":"Pune",
+            "workMode":"Remote",
+            "salary":150000
+        },
+        {
+           "jobTitle":"Junior Software Engineer",
+               "companyName":"Obaps Global Technologies Pvt Ltd",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793505022/cyuuwiztlilqipzbaari.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["HTML","CSS","Javascript","Php","Jquery","Ajax","Reactjs","Redux","Redux-Thunk","React Material UI"],
+            "location":"Tumkur",
+            "workMode":"Hybrid",
+            "salary":50000
+        },
+        {
+ "jobTitle":"Senior Sofware Engineer",
+               "companyName":"DataSoft System Pvt Ltd",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793505188/exojj7v58zndt79dhiqo.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["HTML","CSS","Javascript","Reactjs","Redux","Redux-Thunk"],
+            "location":"Chennai",
+            "workMode":"onSite",
+            "salary":90000
+        },
+        {
+            "jobTitle":"Senior Backend Engineer",
+               "companyName":"Mphasis Technologies",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793505509/giproeksadtyr4lsszw8.webp",
+            "category":"software_engineering",
+            "jobType":"Full Time",
+            "skills":["Php","Python","Django","Nodejs","Laravel","Codeignitor","Ruby on Rails"],
+            "location":"Hyderabad",
+            "workMode":"Hybrid",
+            "salary":100000
+        }
+    ],
+    "Companies":[
+        {
+            "companyName":"Share Trip",
+            "companyTag":"Innovation Driven Workplace culture.",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793511073/pxtdjl0dgkrrjshdlp3d.webp",
+            "noOfEmployees":"1-10 employees"
+        },
+          {
+            "companyName":"Dynamic Solution Innovators",
+            "companyTag":"Building scalable digital products",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504368/c0sd0t9umcdzumma8ktm.webp",
+            "noOfEmployees":"51-200 employees"
+        },
+         {
+            "companyName":"DataSoft Systems",
+            "companyTag":"Empowering careers through technology",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793505188/exojj7v58zndt79dhiqo.webp",
+            "noOfEmployees":"11-50 employees"
+        },
+        {
+            "companyName":"PriyoShop",
+            "companyTag":"Innovation-driven workplace culture",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504604/hggxi5gfw9u4dumjhjk7.webp",
+            "noOfEmployees":"1-10 employees"
+        },
+        {
+            "companyName":"TCS Technologies",
+            "companyTag":"Building on Belief",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793511490/bkkrecaipoweshiieh0v.webp",
+            "noOfEmployees":"500-1000 employees"
+        },
+        {
+            "companyName":"Hola9 Classifieds Private Ltd",
+            "companyTag":"Always Inspiring",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793511757/s6kvcpnohsfj7waafa2l.webp",
+            "noOfEmployees":"1-10 employees"
+
+        },
+        {
+            "companyName":"Eastencher Software Private Limited",
+            "companyTag":"Business innovation through intelligent",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793503678/r0cvyrayqxq843n3gjbq.webp",
+            "noOfEmployees":"51-200 employees"
+        },
+        {
+            "companyName":"Impel IT Solutions",
+            "companyTag":"",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504209/xle6nzfrlzasupi7fqiw.webp",
+            "noOfEmployees":"11-50 employees"
+        },
+        {
+            "companyName":"HCL Technologies",
+            "companyTag":"Superchanging Progress",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793503768/mwtd7an9eitmovk62uin.webp",
+            "noOfEmployees":"500-1000 employees"
+        },
+        {
+            "companyName":"Mphasis Technologies",
+            "companyTag":"The Next Applied",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793505509/giproeksadtyr4lsszw8.webp",
+            "noOfEmployees":"500-1000 employees"
+        },
+        {
+            "companyName":"Infosys",
+            "companyTag":"Navigate Your Next",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793512330/ioqdkqvnky8xbe24al3a.webp",
+            "noOfEmployees":"500-1000 employees"
+        },
+        {
+            "companyName":"Cognizant",
+            "companyTag":"Intuition engineered",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793512422/d6mgh0bnh4gxkq0l7r9n.webp",
+            "noOfEmployees":"500-1000 employees"
+        },
+        {
+            "companyName":"Capgemini Technologies ",
+            "companyTag":"Get the Future you want",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793504004/ybfpvf0p47p8510vxzp9.webp",
+            "noOfEmployees":"500-1000 employees"
+        },
+        {
+            "companyName":"Genpact Technologies",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793512490/pjmydnsubt3khifx80ia.webp",
+            "companyTag":"on Success",
+            "noOfEmployees":"51-200 employees"
+        },
+        {
+            "companyName":"IBM",
+            "companyTag":"Think Vision",
+            "companyLogo":"https://res.cloudinary.com/dh8zxrbtk/image/upload/v1793513449/mqtv5ze0z1pydugsha0l.webp",
+            "noOfEmployees":"51-200 employees"
+        }
+    ],
+    "AppliedJobPosts":[
+        
+    ]
+}
