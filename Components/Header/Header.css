@@ -43,5 +43,52 @@ h5{
   color:green;
 }
 
+dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+padding: 14px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 180px;
+box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+color: black;
+padding: 5px 8px;
+text-decoration: none;
+display: block;
+}
+
+/* Hover effects */
+.dropdown-content a:hover {
+  color:green;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Change button color on hover */
+.dropdown:hover .dropbtn {
+background-color: #3e8e41;
+}
 
 
