@@ -1,7 +1,8 @@
-import { GET_ALL_JOBS, GET_FILTERED_JOBS } from "./JobActionTypes";
+import { GET_ALL_JOBS, GET_FILTERED_JOBS,GET_CATEGORY_JOBS,GET_APPLIED_JOBS } from "./JobActionTypes";
 
 const initialState={
-    jobs:[]
+    jobs:[],
+    appliedJobs:[]
 }
 
 const JobReducer=(state={initialState},action)=>{
@@ -16,6 +17,16 @@ const JobReducer=(state={initialState},action)=>{
                     ...state,
                     jobs:action.payload
                 }
+                case GET_CATEGORY_JOBS:
+                    return{
+                        ...state,
+                        jobs:action.payload
+                    }
+               case GET_APPLIED_JOBS:
+                    return{
+                        ...state,
+                        appliedJobs:action.payload
+               }
             default: return state
     }
 }
