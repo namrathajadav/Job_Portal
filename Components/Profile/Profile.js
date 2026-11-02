@@ -7,6 +7,7 @@ import { getDatabase, ref,get, set,child, push, remove,update } from "firebase/d
 import {  deleteUser } from "firebase/auth";
 import Alert from '@mui/material/Alert';
 import store from '../Redux/store';
+import Footer from '../Footer/Footer';
 import SetLoggedInUser from '../Redux/Thunk/SetLoggedInUserThunk';
 
 
@@ -43,35 +44,21 @@ const Profile=()=>{
    const auth = getAuth();
 const currentUser = auth.currentUser;
 
-//  function writeUserData(userId, userName, email, password,userImage) {
-//   const db = getDatabase();
-//   set(ref(db, 'users/' + userId), {
-//     userId,
-//     userName,
-//     email,
-//     password,
-//     userImage
-//   });
-// }
-
-const writeNewPost=(uid, username, email, password,userImage) =>{
+function writeUserData(userId, username, email, password,userImage) {
   const db = getDatabase();
-
-  // A post entry.
-  const postData = {
-    userId:uid,
+  set(ref(db, 'users/' + userId), {
+    userId,
     userName:username,
     email,
     password,
     userImage
-  };
+  });
+}
 
-  // Get a key for a new Post.
-//   const newPostKey = push(child(ref(db), 'users')).key;
-
-  // Write the new post's data simultaneously in the posts list and the user's post list.
+const deleteUser2=(userId) =>{
+  const db = getDatabase();
   const updates = {};
-  updates['/users/' + uid] = postData;
+  updates['/users/' + userId] = {};
 
   return update(ref(db), updates);
 }
@@ -103,10 +90,17 @@ const writeNewPost=(uid, username, email, password,userImage) =>{
      const user2 = userCredential.user;
      if(user2.uid!=''){
           const db = getDatabase();
-          set(ref(db, 'users/' + loggedInUser.userId), {});
-          delete(loggedInUser.userId);
-          writeNewPost(user2.uid,name,email,loggedInUser.password,'');
-        //   writeNewPost(user2.uid,name,email,loggedInUser.password,'');
+
+           var details={
+                    ...loggedInUser,
+                    userName:name,
+                    email
+                }
+                dispatch(SetLoggedInUser(details));
+                
+          deleteUser2(loggedInUser.userId)
+
+          writeUserData(user2.uid,name,email,loggedInUser.password,'');
        get(child(db, `users/${user2.uid}`)).then((snapshot) => {
   if (snapshot.exists()) {
        dispatch(SetLoggedInUser(snapshot.val()));
@@ -141,10 +135,12 @@ setShowSuccessMessage(false)
 
 
     return(
+        <>
         <div style={{marginTop:"120px"}}>
-            {showSuccessMessage && <Alert severity='success'>User Updated Successfully ! </Alert>}
-            {showErrorMessage && <Alert severity='error'>{errors.nameError && errors.nameError||errors.emailError && errors.emailerror}</Alert>}
-   <h2 style={{marginLeft:'-270px'}}>Welcome, {loggedInUser.userName}</h2>
+ {showErrorMessage==true && <Alert severity='error'>{errors.nameError && errors.nameError||errors.emailError && errors.emailerror}</Alert>}
+ {showSuccessMessage==true && <Alert severity='success' style={{marginTop:'40px'}}>User Updated Successfully ! </Alert>}
+           
+   <h3 style={{marginLeft:'-350px'}}>Welcome, {loggedInUser.userName}</h3>
    <h2>User Profile</h2>
           <form>
 
@@ -166,6 +162,8 @@ setShowSuccessMessage(false)
 
           </form>
         </div>
+        <Footer style={{marginTop:'260px'}}/>
+        </>
     )
 }
 
