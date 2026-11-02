@@ -1,18 +1,62 @@
-import React from "react";
+import React,{useState} from "react";
 import image from '../Images/home_banner_images2.jpg';
 import './Home.css';
-import { TextField } from "@mui/material";
+import { TextField,Alert } from "@mui/material";
 import Button from "@mui/material/Button";
 import { MdWork } from "react-icons/md";
 import Footer from '../Footer/Footer';
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import SetIsLoggedIn from "../Redux/Thunk/SetIsLoggedInThunk";
 
 const Home=()=>{
+    const navigate=useNavigate();
+    const dispatch=useDispatch();
+
+    var [jobRole,setJobRole]=useState('')
+    var [location,setLocation]=useState('');
+    var [errors,setErrors]=useState({})
+    var [showErrorMessage,setShowErrorMessage]=useState(false)
+    var [showSuccessMessage,setShowSuccessMessage]=useState(false);
 
     var loggedInUser={}
     var user=useSelector((store)=>store.User.user);
     if(user!=undefined){
         loggedInUser=user
+    }
+
+    const validate=()=>{
+        var newErrors={}
+        if(jobRole=='' && location==''){
+         newErrors.errorMessage='Enter Atleast One Filter';
+        }
+        setErrors(newErrors);
+        return Object.keys(newErrors).length==0
+    }
+
+    const submitHandler=(e)=>{
+        e.preventDefault();
+        if(validate()){
+            if(jobRole!='' && location==''){
+          navigate(`../searchJobsByRole/${jobRole}`)
+            }else if(jobRole=='' && location!=''){
+                  navigate(`../searchJobsByLocation/${location}`)
+            }else if(jobRole!='' && location!=''){
+                navigate(`../searchJobsByRolesAndLocation/${jobRole}/${location}`);
+            }
+ 
+        }else{
+            setShowErrorMessage(true)
+            setTimeout(()=>{
+         setShowErrorMessage(false)
+            },2000);
+            return;
+        }
+    }
+
+    const navigateToCreateAnAccountHandler=()=>{
+        dispatch(SetIsLoggedIn(false));
+        navigate(`../register`);
     }
    
 
@@ -20,27 +64,28 @@ const Home=()=>{
         <>
         <div className='home_banner'>
             <div style={{display:'inline-block',marginTop:"80px",textAlign:'left',marginRight:'200px'}}>
+               {showErrorMessage && <Alert severity='error'>{errors.errorMessage && errors.errorMessage}</Alert>}
                 <h2>Welcome, {loggedInUser.userName}</h2>
                    <h1 style={{color:'black'}}>Find the Job  <span style={{color:'green'}}>that <br/>fits your life</span></h1>
    <p style={{fontSize:"14px",marginTop:'-20px'}}>Search Open roles. apply in a few steps, and keep your <br/>profile ready for employers</p>
     <div className='search-card'>
-        <form>
+        <form onSubmit={(e)=>submitHandler(e)}>
             <div style={{display:'inline-block',marginRight:'10px'}}>
                 <label style={{fontSize:"14px"}}>ROLE</label><br/>
-                <TextField variant="outlined" style={{width:'110%'}}/>
+                <TextField value={jobRole} onChange={(e)=>setJobRole(e.target.value)} variant="outlined" style={{width:'110%'}}/>
             </div>
 
             <div style={{display:'inline-block',marginRight:'25px',marginLeft:'20px'}}>
                 <label style={{fontSize:"14px"}}>LOCATION</label><br/>
-                <TextField variant="outlined" style={{width:'110%'}}/>
+                <TextField value={location} onChange={(e)=>setLocation(e.target.value)} variant="outlined" style={{width:'110%'}}/>
             </div>
 
             <div style={{display:'inline-block',marginLeft:'5px'}}>
-                <Button variant='contained' size='small' style={{backgroundColor:'green',marginTop:'20px',height:'30px'}}>Search Jobs</Button>
+                <Button type='submit' variant='contained' size='small' style={{backgroundColor:'green',marginTop:'20px',height:'30px'}}>Search Jobs</Button>
             </div>
 
             </form>
-            <p style={{marginLeft:'10px',fontSize:"14px"}}>Create an Account</p>
+            <p style={{marginLeft:'10px',fontSize:"14px",cursor:'pointer',color:'green'}} onClick={()=>navigateToCreateAnAccountHandler()}>Create an Account</p>
     </div>
 
     
@@ -59,8 +104,8 @@ const Home=()=>{
 
                 <div style={{width:'350px',display:'inline-block',marginRight:'20px'}}>
                     <ul className="categories">
-                        <li><MdWork className='work-icon'/> Software Engineering</li>
-                         <li> <MdWork className='work-icon'/> Cyber Security</li>
+                        <li onClick={()=>navigate(`../categoryJobs/software_enginering`)}><MdWork className='work-icon'/> Software Engineering</li>
+                         <li onClick={()=>navigate(`../categoryJobs/cyber_security`)}> <MdWork className='work-icon'/> Cyber Security</li>
                     <li><MdWork className='work-icon'/> Digital Marketing</li>
                           <li><MdWork className='work-icon'/> Customer Support</li>
                            <li><MdWork className='work-icon'/> Legal and Compliance</li>
