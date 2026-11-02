@@ -144,8 +144,7 @@ setShowSuccessMessage(false)
         <div style={{marginTop:"120px"}}>
             {showSuccessMessage && <Alert severity='success'>User Updated Successfully ! </Alert>}
             {showErrorMessage && <Alert severity='error'>{errors.nameError && errors.nameError||errors.emailError && errors.emailerror}</Alert>}
-   <h2 style={{marginLeft:'-250px'}}>Welcome, {loggedInUser.userName}</h2>
-   <p style={{marginLeft:'450px',color:'green'}}>Change Password</p>
+   <h2 style={{marginLeft:'-270px'}}>Welcome, {loggedInUser.userName}</h2>
    <h2>User Profile</h2>
           <form>
 
