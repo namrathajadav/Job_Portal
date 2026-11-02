@@ -1,0 +1,39 @@
+.search-card{
+    background-color: white;
+    padding:15px;
+    width:900px;
+    border-radius: 15px;
+}
+
+.category_jobs_banner{
+    background-color:rgb(215, 237, 215);
+    height:auto;
+    padding:50px;
+}
+
+.job-listings{
+    list-style-type: none;
+}
+
+.job-card{
+    background-color: white;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding:10px;
+}
+.skill-lists{
+    list-style-type: none;
+    margin-left: -25px;
+}
+
+.skill-lists li{
+    display:inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    background-color:rgb(215, 237, 215); 
+    border:1px solid rgb(215, 237, 215);
+    border-radius: 5px;
+    padding:2px;
+    margin-bottom: 7px;
+}
